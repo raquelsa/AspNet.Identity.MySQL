@@ -7,8 +7,8 @@
     <ProjectGuid>{26F6ECF9-4369-417B-8CF2-54FA92DF3660}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.AspNet.Identity.MySQL</RootNamespace>
-    <AssemblyName>Microsoft.AspNet.Identity.MySQL</AssemblyName>
+    <RootNamespace>AspNet.Identity.MySQL</RootNamespace>
+    <AssemblyName>AspNet.Identity.MySQL</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
