@@ -19,20 +19,6 @@ namespace AspNet.Identity.MySQL
         }
 
         /// <summary>
-        /// Deletes a user from the Users table
-        /// </summary>
-        /// <param name="userId">The user's id</param>
-        /// <returns></returns>
-        private int Delete(string userId)
-        {
-            string commandText = "Delete from Users where Id = @userId";
-            Dictionary<string, object> parameters = new Dictionary<string, object>();
-            parameters.Add("@Id", userId);
-
-            return _database.Execute(commandText, parameters);
-        }
-
-        /// <summary>
         /// Returns the user's name given a user id
         /// </summary>
         /// <param name="userId"></param>
@@ -171,6 +157,20 @@ namespace AspNet.Identity.MySQL
             parameters.Add("@id", user.Id);
             parameters.Add("@pwdHash", user.PasswordHash);
             parameters.Add("@SecStamp", user.SecurityStamp);
+
+            return _database.Execute(commandText, parameters);
+        }
+
+        /// <summary>
+        /// Deletes a user from the Users table
+        /// </summary>
+        /// <param name="userId">The user's id</param>
+        /// <returns></returns>
+        private int Delete(string userId)
+        {
+            string commandText = "Delete from Users where Id = @userId";
+            Dictionary<string, object> parameters = new Dictionary<string, object>();
+            parameters.Add("@userId", userId);
 
             return _database.Execute(commandText, parameters);
         }

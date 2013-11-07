@@ -62,7 +62,7 @@ namespace AspNet.Identity.MySQL
         /// <returns></returns>
         public int Insert(Claim userClaim, string userId)
         {
-            string commandText = "Insert into UserClaims (ClaimValue, ClaimType, UserId) values (@value, @type, userId)";
+            string commandText = "Insert into UserClaims (ClaimValue, ClaimType, UserId) values (@value, @type, @userId)";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
             parameters.Add("value", userClaim.Value);
             parameters.Add("type", userClaim.Type);

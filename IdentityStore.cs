@@ -293,8 +293,8 @@ namespace AspNet.Identity.MySQL
                 throw new ArgumentException("Argument cannot be null or empty: roleName.");
             }
 
-            int roleId = roleTable.GetRoleId(roleName);
-            if(roleId > -1)
+            string roleId = roleTable.GetRoleId(roleName);
+            if(!string.IsNullOrEmpty(roleId))
             {
                 userRolesTable.Insert(user, roleId);
             }
@@ -374,9 +374,6 @@ namespace AspNet.Identity.MySQL
         {
             if (user != null)
             {
-                userClaimsTable.Delete(user.Id);
-                userLoginsTable.Delete(user.Id);
-                userRolesTable.Delete(user.Id);
                 userTable.Delete(user);
             }
 

@@ -59,7 +59,7 @@ namespace AspNet.Identity.MySQL
         /// <param name="user">The User</param>
         /// <param name="roleId">The Role's id</param>
         /// <returns></returns>
-        public int Insert(IdentityUser user, int roleId)
+        public int Insert(IdentityUser user, string roleId)
         {
             string commandText = "Insert into UserRoles (UserId, RoleId) values (@userId, @roleId)";
             Dictionary<string, object> parameters = new Dictionary<string, object>();
