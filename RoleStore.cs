@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace AspNet.Identity.MySQL
 {
     /// <summary>
-    /// Class that implements the key ASP.NET Identity store iterfaces
+    /// Class that implements the key ASP.NET Identity role store iterfaces
     /// </summary>
     public class RoleStore : IRoleStore<IdentityRole>
     {

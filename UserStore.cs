@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace AspNet.Identity.MySQL
 {
     /// <summary>
-    /// Class that implements the key ASP.NET Identity store iterfaces
+    /// Class that implements the key ASP.NET Identity user store iterfaces
     /// </summary>
     public class UserStore : IUserStore<IdentityUser>, IUserClaimStore<IdentityUser>, IUserLoginStore<IdentityUser>, IUserRoleStore<IdentityUser>, IUserPasswordStore<IdentityUser>
     {
