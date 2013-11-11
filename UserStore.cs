@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 namespace AspNet.Identity.MySQL
 {
     /// <summary>
-    /// Class that implements the key ASP.nET Identity store iterfaces
+    /// Class that implements the key ASP.NET Identity store iterfaces
     /// </summary>
-    public class MySQLIdentityStore : IUserStore<IdentityUser>, IUserClaimStore<IdentityUser>, IUserLoginStore<IdentityUser>, IUserRoleStore<IdentityUser>, IUserPasswordStore<IdentityUser>
+    public class UserStore : IUserStore<IdentityUser>, IUserClaimStore<IdentityUser>, IUserLoginStore<IdentityUser>, IUserRoleStore<IdentityUser>, IUserPasswordStore<IdentityUser>
     {
         private UserTable userTable;
         private RoleTable roleTable;
@@ -23,16 +23,16 @@ namespace AspNet.Identity.MySQL
         /// Default constructor that initializes a new MySQLDatabase
         /// instance using the Default Connection string
         /// </summary>
-        public MySQLIdentityStore()
+        public UserStore()
         {
-            new MySQLIdentityStore(new MySQLDatabase());
+            new UserStore(new MySQLDatabase());
         }
 
         /// <summary>
         /// Constructor that takes a MySQLDatabase as argument 
         /// </summary>
         /// <param name="database"></param>
-        public MySQLIdentityStore(MySQLDatabase database)
+        public UserStore(MySQLDatabase database)
         { 
             Database = database;
             userTable = new UserTable(database);

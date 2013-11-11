@@ -61,7 +61,7 @@
     <Compile Include="IdentityUser.cs" />
     <Compile Include="UserLoginsTable.cs" />
     <Compile Include="UserClaimsTable.cs" />
-    <Compile Include="IdentityStore.cs" />
+    <Compile Include="UserStore.cs" />
     <Compile Include="MySQLDatabase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoleTable.cs" />

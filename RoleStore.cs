@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 namespace AspNet.Identity.MySQL
 {
     /// <summary>
-    /// Class that implements the key ASP.nET Identity store iterfaces
+    /// Class that implements the key ASP.NET Identity store iterfaces
     /// </summary>
-    public class MySQLRoleStore : IRoleStore<IdentityRole>
+    public class RoleStore : IRoleStore<IdentityRole>
     {
         private RoleTable roleTable;
         public MySQLDatabase Database { get; private set; }
@@ -19,16 +19,16 @@ namespace AspNet.Identity.MySQL
         /// Default constructor that initializes a new MySQLDatabase
         /// instance using the Default Connection string
         /// </summary>
-        public MySQLRoleStore()
+        public RoleStore()
         {
-            new MySQLRoleStore(new MySQLDatabase());
+            new RoleStore(new MySQLDatabase());
         }
 
         /// <summary>
         /// Constructor that takes a MySQLDatabase as argument 
         /// </summary>
         /// <param name="database"></param>
-        public MySQLRoleStore(MySQLDatabase database)
+        public RoleStore(MySQLDatabase database)
         { 
             Database = database;
             roleTable = new RoleTable(database);
