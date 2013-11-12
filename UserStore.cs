@@ -10,7 +10,11 @@ namespace AspNet.Identity.MySQL
     /// <summary>
     /// Class that implements the key ASP.NET Identity user store iterfaces
     /// </summary>
-    public class UserStore : IUserStore<IdentityUser>, IUserClaimStore<IdentityUser>, IUserLoginStore<IdentityUser>, IUserRoleStore<IdentityUser>, IUserPasswordStore<IdentityUser>
+    public class UserStore : IUserStore<IdentityUser>, 
+                             IUserClaimStore<IdentityUser>, 
+                             IUserLoginStore<IdentityUser>, 
+                             IUserRoleStore<IdentityUser>, 
+                             IUserPasswordStore<IdentityUser>
     {
         private UserTable userTable;
         private RoleTable roleTable;
