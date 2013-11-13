@@ -11,7 +11,7 @@ namespace AspNet.Identity.MySQL
      /// Class that encapsulates a MySQL database connections 
      /// and CRUD operations
      /// </summary>
-    public class MySQLDatabase
+    public class MySQLDatabase : IDisposable
     {
         private MySqlConnection _connection;
 
@@ -213,5 +213,13 @@ namespace AspNet.Identity.MySQL
             return value;
         }
 
+        public void Dispose()
+        {
+            if (_connection != null)
+            {
+                _connection.Dispose();
+                _connection = null;
+            }
+        }
     }
 }

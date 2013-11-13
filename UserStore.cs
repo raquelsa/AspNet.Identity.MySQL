@@ -125,7 +125,11 @@ namespace AspNet.Identity.MySQL
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            if (Database != null)
+            {
+                Database.Dispose();
+                Database = null;
+            }
         }
 
         /// <summary>
