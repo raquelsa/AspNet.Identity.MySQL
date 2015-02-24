@@ -147,7 +147,7 @@ namespace AspNet.Identity.MySQL
 
             if (claim == null)
             {
-                throw new ArgumentNullException("user");
+                throw new ArgumentNullException("claim");
             }
 
             userClaimsTable.Insert(claim, user.Id);
