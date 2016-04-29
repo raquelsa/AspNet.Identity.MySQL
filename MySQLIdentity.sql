@@ -19,6 +19,7 @@ CREATE TABLE `<DATABASENAME>`.`UserClaims` (
   FOREIGN KEY (`UserId`)
     REFERENCES `<DATABASENAME>`.`Users` (`Id`) on delete cascade);
 
+
 CREATE TABLE `<DATABASENAME>`.`UserLogins` (
   `UserId` VARCHAR(45) NOT NULL,
   `ProviderKey` VARCHAR(100) NULL,
